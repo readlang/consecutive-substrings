@@ -1,5 +1,21 @@
 function consecutiveSubstrings(string) {
-  // type your code here
+
+  let output = []
+
+  if (string.length === 0) {
+    return output
+  }
+
+  for (i=0; i<string.length; i++) {
+    let substr = ""
+    
+    for (j=i; j<string.length; j++) {
+      substr = substr + string[j]
+      output.push(substr)
+    }
+  }
+
+  return output
 }
 
 if (require.main === module) {
